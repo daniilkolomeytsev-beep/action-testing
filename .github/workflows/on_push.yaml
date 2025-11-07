@@ -1,0 +1,19 @@
+name: CI
+
+permissions:
+  contents: write
+
+on:
+  push:
+
+jobs:
+  test:
+    name: Print test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repo
+      - uses: actions/checkout@v4
+
+      - name: Echo file contents
+        run: cat file.txt
