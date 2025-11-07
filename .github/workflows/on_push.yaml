@@ -16,4 +16,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Echo file contents
-        run: cat file.txt
+        run: cat test.txt
