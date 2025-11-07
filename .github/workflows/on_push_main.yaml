@@ -1,0 +1,22 @@
+name: CI for main
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+  
+jobs:
+  test:
+    name: Print test main
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+
+      - name: Echo file contents
+        run: cat file.txt
